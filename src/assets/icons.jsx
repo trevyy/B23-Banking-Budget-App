@@ -8,7 +8,7 @@ import UserIconImg from "./user.svg";
 import LogoutIconImg from "./logout.svg";
 
 export const SiteLogo = ({ className }) => (
-    <img className={className} src={SiteLogoImg} />
+    <img className={className} src={SiteLogoImg} width="50" height="50"/>
 );
 
 export const HamIcon = ({ className }) => (
