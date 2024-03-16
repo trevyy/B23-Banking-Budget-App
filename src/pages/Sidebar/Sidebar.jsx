@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Sidebar.scss";
-import { HamIcon, HomeIcon, TransactIcon, TransferIcon, UserIcon, LogoutIcon} from "../assets/icons";
+import { HamIcon, HomeIcon, TransactIcon, TransferIcon, UserIcon, LogoutIcon} from "../../assets/icons";
 
 const Sidebar = () => {
   const [currentPage, setCurrentPage] = useState(null);
@@ -22,6 +22,12 @@ const Sidebar = () => {
           {/*<p className={currentPage === 'Settings' ? 'selected' : ''} onClick={() => setCurrentPage('Settings')}>  Settings </p>*/}
           <p className={currentPage === 'Logout' ? 'selected' : ''} onClick={() => setCurrentPage('Logout')}> <LogoutIcon/> Logout </p>
         </div> 
+        {/*<nav>
+          <Link to={}> </Link>
+          <Link to={}> </Link>
+          <Link to={}> </Link>
+          <Link to={}> </Link>
+      </nav> */}
       </div>)}
     </div>
   );
