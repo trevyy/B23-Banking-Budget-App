@@ -3,26 +3,26 @@
     justify-content: space-between; 
     height: 100px;
     align-items: center;
-    margin-top: 0.5em;
+    margin-top: 0.8rem;
     margin-left: 1rem;
 
     .title {
         font-size: 2rem;
         font-weight: bold;
         text-align: left;
-        padding: 0 20rem 0 1rem;
     }
     
     .time {
-        font-size: 1rem; 
-        text-align: right; 
-        padding: 0 1rem 0 1rem; 
+        display: flex;
+        font-size: 1rem;
+        margin: 0 4rem 0 0;
+        margin-left: auto;
     }
     
     .logo {
         display: flex;
         align-items: center;
-        margin-right: 0.5rem;
+        margin: 0 0 0 0.5rem;
     
         .logo p {
             display: flex;
@@ -30,7 +30,7 @@
         }
     
         .logo-img {
-            width: 0px;
+            width: 10px;
         }
     
         .logo-txt {
