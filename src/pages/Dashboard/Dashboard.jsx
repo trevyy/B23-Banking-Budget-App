@@ -1,56 +1,30 @@
 import React from "react";
 import "./Dashboard.scss";
-import Sidebar from "../Sidebar/Sidebar.jsx";
-import Header from "../Header/Header.jsx";
+import Header from "../../components/Header/Header.jsx";
 
-function Dashboard() {
+const Dashboard = () => {
 
   return (
     <div className="dashboard">
-      <Sidebar/>
       <div className="dashboard-main">
-        <Header />
+        <Header title="Dashboard"/>
         <div className="grid-container">
           <div className="grid-column-left">
             <div className="grid-column-left-side">
-              <div className="grid-item"><b> Total Balance </b></div>
-              <div className="grid-item"><b> Total Savings </b></div>
+              <div id="balance" className="grid-item"><b> Total Balance </b></div>
+              <div id="savings" className="grid-item"><b> Total Savings </b></div>
             </div>
-            <div className="grid-item"><b> Transaction </b>
-            </div>
-            <div className="grid-item"><b> Quick Transfer </b></div>
+            <div id="transaction" className="grid-item"><b> Transaction </b></div>
+            <div id="transfer" className="grid-item"><b> Quick Transfer </b></div>
           </div>
           <div className="grid-column-right">
-            <div className="grid-item"
-                 style={{backgroundColor: "rgba(75, 0, 175, 1)"}}
-            > 
+            <div id="debit" className="grid-item"> 
               <b> Debit </b>
             </div>
-            <div className="grid-item"><b> Card Info </b></div>
-            {/*<div className="grid-item"><b> Add New Card </b></div>*/}
+            <div id="card-info" className="grid-item"><b> Card Info </b></div>
           </div>
         </div>
       </div>
-    
-    {/*<nav class="sidebar">    
-      <div class="sidebar-sticky">
-        <ul class="nav nav-pills  nav-fill flex-column" role="tablist" style="margin-top:42px;">
-          <li class="nav-item">
-            <a class="nav-link active" data-toggle="pill" href="#/!" style="text-align:left;">
-              <img src="/images/windows.png" style="height:20px;"/>
-              Dashboard
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" data-toggle="pill" href="#!people" style="text-align:left;">
-              <img src="/images/people.png" style="height:20px;"/>                                
-              People
-            </a>
-          </li>
-        </ul>
-      </div>
-    </nav>*/}
-    
     </div>
   );
 }

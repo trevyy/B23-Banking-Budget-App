@@ -42,3 +42,21 @@
   color: #888;
 }
 */
+
+.page-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.sidebar {
+  float: left;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  padding: 48px 0 0;
+}
+
+.dashboard, .transaction, .transfer, .logout {
+  margin-left: 1rem;
+  flex-grow: 1;
+}

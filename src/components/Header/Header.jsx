@@ -3,12 +3,12 @@ import "./Header.scss";
 import useCurrentDateTime from "../../hooks/CurrentDateTime.jsx";
 import { SiteLogo } from "../../assets/icons.jsx";
 
-function Header() {
+function Header({title}) {
   const { formattedDate } = useCurrentDateTime("ddd, MMM DD, hh:mm A");
 
   return (
     <div className="header"> 
-        <p className="title"> Dashboard </p>
+        <p className="title"> {title} </p>
         <p className="time"> {formattedDate} </p>
         <div className="logo"> 
           <p className="logo-img"> <SiteLogo /> </p>
