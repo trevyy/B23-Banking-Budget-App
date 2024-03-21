@@ -8,7 +8,7 @@ const Expenses = () => {
     <div className="expenses">
       <div className="expenses-main">
         <Header title="Expenses"/>
-        Expenses - page
+        Expenses aaaa
       </div>    
     </div>
   );
