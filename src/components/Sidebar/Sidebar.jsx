@@ -1,7 +1,9 @@
 import React, { useState } from "react";
-import "./Sidebar.scss";
-import { HamIcon, HomeIcon, TransactIcon, TransferIcon, WalletIcon, UserIcon, LogoutIcon} from "../../assets/icons";
 import { Link } from "react-router-dom";
+import "./Sidebar.scss";
+
+import { HamIcon, HomeIcon, TransactIcon, TransferIcon, WalletIcon, UserIcon, LogoutIcon} from "../../assets/icons";
+
 import handleLogout from "../../hooks/handleLogout";
 
 const NavItems = [

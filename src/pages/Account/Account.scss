@@ -1,35 +1,68 @@
-.create-account {
+$color-purple: linear-gradient(to bottom, rgb(111, 0, 255, 1), rgb(56, 0, 130, 1));
+
+.account {
     display: flex;
     
-    .create-account-main {
+    .account-main {
         flex-grow: 1;
         margin: 0 1rem 0 1rem;
 
-        .user-title {
+        .account-title {
             padding-left: 1rem; 
         }
 
-        .user-table {
+        .account-table {
             width: 90%;
-            margin: 1rem 3rem; 
+            margin: 1rem 3rem;
+            padding: 1rem 0 2rem 0;
 
             th, td {
                 padding: 0.5rem;
             }
 
-            .user-table-header {
+            .account-table-header {
                 text-align: center;
-                background: linear-gradient(to bottom, rgb(111, 0, 255, 1), rgb(56, 0, 130, 1));;
+                background: $color-purple;
                 padding: 0.2rem 1.3rem;
             }
     
-            .user-table-content {
+            .account-table-content {
                 text-align: center;
+            }
+        }
+
+        .account-btns {
+            display: flex;
+            justify-content: right;
+            font-size: 1rem;
+            margin-right: 1.6rem;
+            margin-top: -3rem;
+            
+            .prev-btn, .next-btn{
+                background: $color-purple;
+                border: none;
+                border-radius: 5px;
+                padding: 0.5rem;
+                margin: 0 1rem;
+                width: 5rem;
             }
         }
     }
 
-    .create-user {
+    .account-create-main {
         display: flex;
+        text-align: center;
+        left: 10%;    
+        flex-direction: column;
+
+        .account-create-toggle {
+            display: flex;
+            background: $color-purple;
+            border: none;
+            border-radius: 5px;
+            padding: 0.5rem;
+            margin: 0;
+            width: 7rem;
+        }
     }
 }

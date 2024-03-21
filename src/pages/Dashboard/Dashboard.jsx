@@ -1,11 +1,17 @@
 import React from "react";
 import "./Dashboard.scss";
-import Header from "../../components/Header/Header.jsx";
-import findUser from "../../hooks/useUserFinder.jsx";
+
 import { CardChip } from "../../assets/icons.jsx";
+
+import Header from "../../components/Header/Header.jsx";
+import DisplayTransactions from "../../components/DisplayTransactions/DisplayTransactions.jsx";
+
+import findUser from "../../hooks/useUserFinder.jsx";
+
 
 const Dashboard = () => {
   const user = findUser();
+  const displayTransaction = (user.transactions).slice(0).reverse().slice(0, 5);
 
   return (
     <div className="dashboard">
@@ -17,7 +23,10 @@ const Dashboard = () => {
               <div id="balance" className="grid-item"><b> Total Balance </b></div>
               <div id="savings" className="grid-item"><b> Total Savings </b></div>
             </div>
-            <div id="transaction" className="grid-item"><b> Transaction </b></div>
+            <div id="transaction" className="grid-item">
+              <b> Transaction </b>
+              {DisplayTransactions(displayTransaction)}
+            </div>
             <div id="transfer" className="grid-item"><b> Quick Transfer </b></div>
           </div>
           <div className="grid-column-right">
@@ -43,4 +52,3 @@ const Dashboard = () => {
 }
   
 export default Dashboard;
-  

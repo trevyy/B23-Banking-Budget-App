@@ -11,24 +11,18 @@
         font-weight: bold;
         text-align: left;
     }
-
-    .welcome {
-        display: flex;
-        margin: 0;
-        margin-left: auto;
-    }
     
-    .time {
+    .welcome, .time {
         display: flex;
         font-size: 1rem;
-        margin: 0 4rem 0 0;
+        margin-right: 4rem;
         margin-left: auto;
     }
     
     .logo {
         display: flex;
         align-items: center;
-        margin: 0 0 0 0.5rem;
+        margin-left: 0.5rem;
     
         .logo p {
             display: flex;
@@ -40,7 +34,7 @@
         }
     
         .logo-txt {
-            padding: 0 0.5rem 0 0.5rem;
+            padding: 0 0.5rem;
         }
     }
 }

@@ -5,6 +5,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import { userData } from '../../Data';
+
 import handleCreateEmail from '../../hooks/handleCreateEmail';
 import handleCreatePassword from '../../hooks/handleCreatePassword';
 import handleGetUserEmail from '../../hooks/handleGetUserEmail';
@@ -21,6 +22,8 @@ const CreateUser = () => {
     accountType: "Savings Account",
     isAdmin: false,
     isLoggedIn: false,
+    transactions: [],
+    expenseList: [],
   });
 
   const [existingUsers, setExistingUsers] = useState(userData);
@@ -66,33 +69,41 @@ const CreateUser = () => {
       <ToastContainer />
       <input
         type="text"
-        placeholder="Full Name"
+        autoComplete="off"
+        placeholder="full name"
         name="fullname"
         value={newUser.fullname}
         onChange={handleChange}
+        className="create-user-details"
       />
       <input
         type="email"
-        placeholder="Email"
+        autoComplete="off"
+        placeholder="email"
         name="email"
         value={newUser.email}
         onChange={handleChange}
+        className="create-user-details"
       />
       <input
         type="password"
-        placeholder="Password"
+        autoComplete="off"
+        placeholder="password"
         name="password"
         value={newUser.password}
         onChange={handleChange}
+        className="create-user-details"
       />
       <input
         type="number"
-        placeholder="Balance"
+        autoComplete="off"
+        placeholder="starting balance"
         name="balance"
         value={newUser.balance}
         onChange={handleChange}
+        className="create-user-details"
       />
-      <button onClick={handleCreateUser}> Create User </button>
+      <button onClick={handleCreateUser} className="create-user-btn"> Create User </button>
     </div>
   );
 };

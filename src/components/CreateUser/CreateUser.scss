@@ -3,4 +3,17 @@
     align-items: center;
     flex-direction: column;
     row-gap: 0.5rem;
+
+    .create-user-details {
+        font-weight: bold;
+        padding: 0.3rem;
+        border-radius: 8px;
+    }
+
+    .create-user-btn {
+        background: linear-gradient(to bottom, rgb(111, 0, 255, 1), rgb(56, 0, 130, 1));
+        border: none;
+        border-radius: 5px;
+        padding: 0.5rem;
+    }
 }

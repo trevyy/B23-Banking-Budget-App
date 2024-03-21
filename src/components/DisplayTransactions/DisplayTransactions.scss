@@ -1,0 +1,22 @@
+$color-purple: linear-gradient(to bottom, rgb(111, 0, 255, 1), rgb(56, 0, 130, 1));
+
+.transaction-table {
+    width: 90%;
+    margin: 1rem 1rem 1rem 1.5rem;
+
+    th, td {
+        padding: 0.4rem 0.5rem;
+    }
+
+    .transaction-table-header {
+        text-align: center;
+        color: white;
+        background: $color-purple;
+        font-size: 0.7rem;
+    }
+
+    .transaction-table-content {
+        text-align: center;
+        font-size: 0.8rem;
+    }
+}

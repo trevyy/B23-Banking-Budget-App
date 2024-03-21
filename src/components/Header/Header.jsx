@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Header.scss";
-import useCurrentDateTime from "../../hooks/useCurrentDateTime.jsx";
+
 import { SiteLogo } from "../../assets/icons.jsx";
+
+import useCurrentDateTime from "../../hooks/useCurrentDateTime.jsx";
 import findUser from "../../hooks/useUserFinder.jsx";
 
 function Header({title}) {

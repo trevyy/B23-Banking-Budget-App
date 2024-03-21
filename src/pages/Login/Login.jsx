@@ -1,13 +1,15 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Login.scss";
 
-import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-import { SiteLogo, LoginOverlay } from "../../assets/icons";
-import handleGetUserEmail from "../../hooks/handleGetUserEmail";
 import { userData } from "../../Data";
+
+import { SiteLogo, LoginOverlay } from "../../assets/icons";
+
+import handleGetUserEmail from "../../hooks/handleGetUserEmail";
 
 const Login = ({ onLogin }) => {
     const [email, setEmail] = useState("");
