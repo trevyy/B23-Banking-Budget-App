@@ -12,13 +12,14 @@ const handleLogout = () => {
         );
 
         if (userIndex !== -1) {
-            userData[userIndex].loginStatus = false;
+            userData[userIndex].setIsLoggedIn = false;
             localStorage.removeItem("currentUser");
             localStorage.setItem("userData", JSON.stringify(userData));
-            console.log("redirecting to login");
-            navigate("/login");
         }
     }
+    console.log("redirecting to login");
+    localStorage.setItem("isLoggedIn", false);
+    navigate("/login");
 }
 
 export default handleLogout;

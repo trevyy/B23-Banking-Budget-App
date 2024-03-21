@@ -28,9 +28,7 @@
     display: flex;
     height: 100vh;
     align-items: center;
-    //justify-content: center;
     background: rgba(75, 0, 175, 0.8);
-    //row-gap: 4rem;
     flex-direction: column;
     padding: 0 2rem 0 2rem;
     width: 50%;
@@ -43,15 +41,19 @@
         z-index: -1;
     }
 
-    .login, .create-account {
+    .login-details {
         display: flex;
         flex-direction: column;
         row-gap: 0.5rem;
         font-size: 2rem;
         align-items: center;
         font-weight: bold;
-        margin: -27rem 0 0 0;
         color: white;
+        position: absolute;
+        top: 50%;
+        left: 72%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
     }
 
     .login-email-txt, .login-password-txt {
@@ -75,6 +77,7 @@
         box-shadow: none;
         margin: 1rem 0;
         padding: 0.5rem 1rem;
+        cursor: pointer;
         transition: ease 0.4s;
 
         &:hover{

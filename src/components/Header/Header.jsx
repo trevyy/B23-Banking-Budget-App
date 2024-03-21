@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Header.scss";
 import useCurrentDateTime from "../../hooks/useCurrentDateTime.jsx";
 import { SiteLogo } from "../../assets/icons.jsx";
+import findUser from "../../hooks/useUserFinder.jsx";
 
 function Header({title}) {
   const { formattedDate } = useCurrentDateTime("ddd, MMM DD, hh:mm A");
@@ -9,6 +10,7 @@ function Header({title}) {
   return (
     <div className="header"> 
       <p className="title"> {title} </p>
+      <p className="welcome"> Welcome,&nbsp;<b>{findUser().fullname}</b>! </p>
       <p className="time"> {formattedDate} </p>
       <div className="logo"> 
         <p className="logo-img"> <SiteLogo /> </p>
