@@ -11,6 +11,7 @@ import Dashboard from "../pages/Dashboard/Dashboard";
 import Transaction from "../pages/Transaction/Transaction";
 import Transfer from "../pages/Transfer/Transfer";
 import Account from "../pages/Account/Account";
+import Expenses from "../pages/Expenses/Expenses";
 import Login from "../pages/Login/Login";
 
 const AppRouter = () => {
@@ -55,6 +56,13 @@ const AppRouter = () => {
             element: <PrivateRoute 
                         path="/account" 
                         element={<> <Sidebar /> <Account /> </>} 
+                     />,
+        },
+        {
+            path: "/expenses",
+            element: <PrivateRoute 
+                        path="/expenses" 
+                        element={<> <Sidebar /> <Expenses /> </>} 
                      />,
         },
         {

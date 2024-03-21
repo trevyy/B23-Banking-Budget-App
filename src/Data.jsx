@@ -9,6 +9,7 @@ export const userData = [
         accountType: "---",
         isAdmin: true,
         isLoggedIn: false,
+        //buyList: [""],
     },
     {
         userId: "48b8f84d-df4e-4d49-b662-bcde71a8764g",

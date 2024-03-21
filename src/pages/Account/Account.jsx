@@ -35,6 +35,7 @@ const Account = () => {
               ))}
             </tbody>
           </table>
+          <div> <CreateUser className="create-user"/> </div>
         </div>
       </div>
     </div>

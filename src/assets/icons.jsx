@@ -4,6 +4,7 @@ import HamIconImg from "./hamburger.svg";
 import HomeIconImg from "./home.svg";
 import TransactIconImg from "./transaction.svg";
 import TransferIconImg from "./transfer.svg";
+import WalletIconImg from "./wallet.svg";
 import UserIconImg from "./user.svg";
 import LogoutIconImg from "./logout.svg";
 import LoginOverlayImg from "./login-overlay.jpg";
@@ -28,6 +29,11 @@ export const TransactIcon = ({ className }) => (
 export const TransferIcon = ({ className }) => (
     <img className={className} src={TransferIconImg} />
 );
+
+export const WalletIcon = ({ className }) => (
+    <img className={className} src={WalletIconImg} />
+);
+
 
 export const UserIcon = ({ className }) => (
     <img className={className} src={UserIconImg} />
