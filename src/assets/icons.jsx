@@ -6,6 +6,8 @@ import TransactIconImg from "./transaction.svg";
 import TransferIconImg from "./transfer.svg";
 import UserIconImg from "./user.svg";
 import LogoutIconImg from "./logout.svg";
+import LoginOverlayImg from "./login-overlay.jpg";
+import CardChipImg from "./card-chip.svg";
 
 export const SiteLogo = ({ className }) => (
     <img className={className} src={SiteLogoImg} width="50" height="50"/>
@@ -35,3 +37,10 @@ export const LogoutIcon = ({ className }) => (
     <img className={className} src={LogoutIconImg} />
 );
 
+export const LoginOverlay = ({ className }) => (
+    <img className={className} src={LoginOverlayImg} />
+);
+
+export const CardChip = ({ className }) => (
+    <img className={className} src={CardChipImg} />
+);

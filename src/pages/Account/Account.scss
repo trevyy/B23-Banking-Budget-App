@@ -1,0 +1,31 @@
+.create-account {
+    display: flex;
+    
+    .create-account-main {
+        flex-grow: 1;
+        margin: 0 1rem 0 1rem;
+
+        .user-title {
+            padding-left: 1rem; 
+        }
+
+        .user-table {
+            width: 90%;
+            margin: 1rem 3rem; 
+
+            th, td {
+                padding: 0.5rem;
+            }
+
+            .user-table-header {
+                text-align: center;
+                background: linear-gradient(to bottom, rgb(111, 0, 255, 1), rgb(56, 0, 130, 1));;
+                padding: 0.2rem 1.3rem;
+            }
+    
+            .user-table-content {
+                text-align: center;
+            }
+        }
+    }
+}

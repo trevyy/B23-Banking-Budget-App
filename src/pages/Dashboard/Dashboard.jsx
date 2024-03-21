@@ -1,8 +1,11 @@
 import React from "react";
 import "./Dashboard.scss";
 import Header from "../../components/Header/Header.jsx";
+import findUser from "../../hooks/useUserFinder.jsx";
+import { CardChip } from "../../assets/icons.jsx";
 
 const Dashboard = () => {
+  const user = findUser();
 
   return (
     <div className="dashboard">
@@ -19,9 +22,19 @@ const Dashboard = () => {
           </div>
           <div className="grid-column-right">
             <div id="debit" className="grid-item"> 
-              <b> Debit </b>
+              <p className="debit-title"> Debit <b>JTT Bank</b></p>
+              <p className="debit-number"> {user.accountNumber} </p>
+              <p className="debit-balance"> ₱{user.balance} </p>
+              <p className="debit-name"> {user.fullname} < CardChip className="card-chip"/> </p>
             </div>
-            <div id="card-info" className="grid-item"><b> Card Info </b></div>
+            <div id="card-info" className="grid-item">
+              <b className="info-title"> Card Info </b>
+              <p className="info-number"> <b>Card Number</b> <br/> {user.accountNumber} </p>
+              <p className="info-name"> <b>Name</b> <br/> {user.fullname} </p>
+              <p className="info-balance"> <b>Balance</b> <br/> ₱{user.balance} </p>
+              <p className="info-type"> <b>Account Type</b> <br/> {user.accountType} </p>
+              <p className="info-bank"> <b>Bank</b> <br/> JTT Bank </p>
+            </div>
           </div>
         </div>
       </div>

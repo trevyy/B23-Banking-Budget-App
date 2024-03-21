@@ -44,16 +44,52 @@
             }
 
             #debit {
-                background-color: rgba(75, 0, 175, 1);
+                background: linear-gradient(to bottom right, rgb(111, 0, 255, 1), rgb(56, 0, 130, 1));
                 height: 10rem;
+                padding: 1rem 1.5rem 1.5rem;
+
+                .debit-title {
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 0 0 0.5rem 0;
+                }
+
+                .debit-number {
+                    font-size: 12px;
+                    margin-bottom: 0;
+                }
+
+                .debit-balance {
+                    font-size: 34px;
+                    font-weight: bold;
+                    margin: 0;
+                }
+
+                .debit-name {
+                    display: flex;
+                    margin-top: 0.5rem;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+
+                .card-chip {
+                    border-radius: 6px;
+                    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%), radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+                }
             }
 
             #card-info {
-                height: 18rem;
+                height: 20rem;
+                padding: 2rem 1.5rem 0;
+                font-size: 0.9rem;
+
+                .info-title {
+                    font-size: 1.5rem;
+                }
             }
             
             .grid-item { 
-                background-color: #414141;
+                background-color: #2e2e2e;
                 border-radius: 20px;
                 padding: 1rem;
                 margin: 0.5rem;
