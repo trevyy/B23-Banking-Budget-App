@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Sidebar.scss";
-import { HamIcon, HomeIcon, TransactIcon, TransferIcon, UserIcon, LogoutIcon} from "../../assets/icons";
+import { HamIcon, HomeIcon, TransactIcon, TransferIcon, WalletIcon, UserIcon, LogoutIcon} from "../../assets/icons";
 import { Link } from "react-router-dom";
 import handleLogout from "../../hooks/handleLogout";
 
@@ -24,6 +24,11 @@ const NavItems = [
     url: "/account", 
     name: "Account",
     logo: <UserIcon />,
+  },
+  {
+    url: "/expenses", 
+    name: "Expenses",
+    logo: <WalletIcon/>,
   },
   {
     url: "/login", 
