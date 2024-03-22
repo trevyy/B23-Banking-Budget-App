@@ -12,7 +12,7 @@ function Header({title}) {
   return (
     <div className="header"> 
       <p className="title"> {title} </p>
-      <p className="welcome"> Welcome,&nbsp;<b>{findUser().fullname}</b>! </p>
+      <p className="welcome"> Welcome,&nbsp;<b>{findUser("currentUser").fullname}</b>! </p>
       <p className="time"> {formattedDate} </p>
       <div className="logo"> 
         <p className="logo-img"> <SiteLogo /> </p>

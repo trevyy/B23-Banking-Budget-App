@@ -1,4 +1,4 @@
-import { userData } from "../Data";
+import { getUserData } from "../Data";
 import dayjs from "dayjs";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -6,6 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 const handleTransaction = (user, amount, setAmount, isDeposit) => {
     let newBalance = 0;
     const transactionDate = dayjs().format("YYYY-MM-DD, hh:mm:ss A");
+    const userData = getUserData();
     amount = parseInt(amount, 10).toString();
 
     if (isDeposit) {

@@ -1,3 +1,5 @@
+$color-purple: rgba(75, 0, 175, 0.8);
+
 .login {
     display: flex;
 }
@@ -28,7 +30,7 @@
     display: flex;
     height: 100vh;
     align-items: center;
-    background: rgba(75, 0, 175, 0.8);
+    background: $color-purple;
     flex-direction: column;
     padding: 0 2rem 0 2rem;
     width: 50%;
@@ -50,7 +52,7 @@
         font-weight: bold;
         color: white;
         position: absolute;
-        top: 50%;
+        top: 45%;
         left: 72%;
         transform: translate(-50%, -50%);
         z-index: 1;
@@ -70,7 +72,7 @@
     button {
         font-size: 1rem;
         font-weight: bold;
-        color: rgba(75, 0, 175, 1);
+        color: $color-purple;
         background: white;
         border-radius: 20px;
         border: none;
@@ -83,6 +85,29 @@
         &:hover{
             color: white;
             background-color: #242424;;
+        }
+    }
+
+    .account-create-main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        top: 80%;
+        left: 72%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+    
+        .account-create-toggle {
+            background: white;
+            color: $color-purple;
+            border: none;
+            border-radius: 20px;
+            padding: 0.5rem;
+            margin:  30px 0 0 0;
+            width: 7rem;
+            font-size: 0.8rem;
         }
     }
 }

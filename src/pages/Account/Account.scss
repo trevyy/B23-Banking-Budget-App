@@ -48,21 +48,4 @@ $color-purple: linear-gradient(to bottom, rgb(111, 0, 255, 1), rgb(56, 0, 130, 1
             }
         }
     }
-
-    .account-create-main {
-        display: flex;
-        text-align: center;
-        left: 10%;    
-        flex-direction: column;
-
-        .account-create-toggle {
-            display: flex;
-            background: $color-purple;
-            border: none;
-            border-radius: 5px;
-            padding: 0.5rem;
-            margin: 0;
-            width: 7rem;
-        }
-    }
 }

@@ -7,12 +7,14 @@ import DisplayTransactions from "../../components/DisplayTransactions/DisplayTra
 import findUser from "../../hooks/useUserFinder.jsx";
 import handleTransaction from "../../hooks/handleTransaction.jsx";
 import handleNextPage from "../../hooks/handleNextPage.jsx";
+import handleNumberFormat from "../../hooks/handleNumberFormat.jsx";
 
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Transaction = () => {
-  const user = findUser();
+  const user = findUser("currentUser");
+  const userBalance = handleNumberFormat(user.balance);
   const [amount, setAmount] = useState(0);
   const { displayedUsers, handleNext, handlePrevious } = handleNextPage(user.transactions);
 
@@ -30,7 +32,7 @@ const Transaction = () => {
         <Header title="Transaction"/>
         <ToastContainer />
         <p className="transaction-balance">
-          <b> Current Balance: </b> ₱{user.balance}
+          <b> Current Balance: </b> ₱{userBalance}
         </p>
 
         <div className="transaction-input">

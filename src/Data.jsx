@@ -10,6 +10,7 @@ export const userData = [
         isAdmin: true,
         isLoggedIn: false,
         transactions: [],
+        transfers: [],
         expenseList: [],
     },
     {
@@ -23,11 +24,12 @@ export const userData = [
         isAdmin: false,
         isLoggedIn: false,
         transactions: [],
+        transfers: [],
         expenseList: [],
     },
     {
         userId: "48b8f84d-df4e-1p29-c742-bcde71a2345y",
-        accountNumber: "2024-0321-1224-0746",
+        accountNumber: "2024-0321-1453-1356",
         fullname: "John Doe",
         email: "john_doe@gmail.com",
         password: "passwordjohn",        
@@ -36,6 +38,7 @@ export const userData = [
         isAdmin: false,
         isLoggedIn: false,
         transactions: [],
+        transfers: [],
         expenseList: [],
     },
 ];

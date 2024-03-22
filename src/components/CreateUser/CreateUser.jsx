@@ -4,7 +4,7 @@ import "./CreateUser.scss";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-import { userData } from '../../Data';
+import { getUserData } from '../../Data';
 
 import handleCreateEmail from '../../hooks/handleCreateEmail';
 import handleCreatePassword from '../../hooks/handleCreatePassword';
@@ -23,12 +23,15 @@ const CreateUser = () => {
     isAdmin: false,
     isLoggedIn: false,
     transactions: [],
+    transfers: [],
     expenseList: [],
   });
 
-  const [existingUsers, setExistingUsers] = useState(userData);
+  const [existingUsers, setExistingUsers] = useState(getUserData());
   
   const handleCreateUser = () => {
+    e.preventDefault();
+    
     const validEmail = handleCreateEmail(newUser.email);
     const validPassword = handleCreatePassword(newUser.password);
 
@@ -53,7 +56,7 @@ const CreateUser = () => {
   }
 
   useEffect(() => {
-    localStorage.setItem("users", JSON.stringify(existingUsers));
+    localStorage.setItem("userData", JSON.stringify(existingUsers));
   }, [existingUsers])
 
   const handleChange = (e) => {
