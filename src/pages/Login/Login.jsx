@@ -1,19 +1,21 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Login.scss";
 
-import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+import { getUserData } from "../../Data";
 import { SiteLogo, LoginOverlay } from "../../assets/icons";
+import CreateUser from "../../components/CreateUser/CreateUser.jsx";
 import handleGetUserEmail from "../../hooks/handleGetUserEmail";
-import { userData } from "../../Data";
 
 const Login = ({ onLogin }) => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
-    const user = handleGetUserEmail(email, userData);
+    const user = handleGetUserEmail(email, getUserData());
+    const [isAccountCreateVisible, setIsAccountCreateVisible] = useState(false);
 
     const handleLogin = () => {
         if (user && user.password === password) {
@@ -26,6 +28,10 @@ const Login = ({ onLogin }) => {
         } else {
             toast.error("Incorrect email or password.");
         }
+    };
+
+    const toggleCreateUserVisibility = () => {
+        setIsAccountCreateVisible(prevState => !prevState);
     };
 
     const handleKeyPress = (e) => {
@@ -61,7 +67,11 @@ const Login = ({ onLogin }) => {
                         onChange={(event) => setPassword(event.target.value)}
                         onKeyPress={handleKeyPress}
                     />
-                    <button onClick={handleLogin}> Login </button>
+                    <button onClick={handleLogin} className="login-btn"> Login </button>
+                </div>
+                <div className="account-create-main">
+                    <button onClick={toggleCreateUserVisibility} className="account-create-toggle"> Create Account </button>
+                    {isAccountCreateVisible && <CreateUser className="account-create"/>}
                 </div>
             </div>
         </div>

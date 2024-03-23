@@ -9,7 +9,9 @@ export const userData = [
         accountType: "---",
         isAdmin: true,
         isLoggedIn: false,
-        //buyList: [""],
+        transactions: [],
+        transfers: [],
+        expenseList: [],
     },
     {
         userId: "48b8f84d-df4e-4d49-b662-bcde71a8764g",
@@ -21,10 +23,13 @@ export const userData = [
         accountType: "Savings Account",
         isAdmin: false,
         isLoggedIn: false,
+        transactions: [],
+        transfers: [],
+        expenseList: [],
     },
     {
         userId: "48b8f84d-df4e-1p29-c742-bcde71a2345y",
-        accountNumber: "2024-0321-1224-0746",
+        accountNumber: "2024-0321-1453-1356",
         fullname: "John Doe",
         email: "john_doe@gmail.com",
         password: "passwordjohn",        
@@ -32,6 +37,9 @@ export const userData = [
         accountType: "Savings Account",
         isAdmin: false,
         isLoggedIn: false,
+        transactions: [],
+        transfers: [],
+        expenseList: [],
     },
 ];
 

@@ -3,4 +3,17 @@
     align-items: center;
     flex-direction: column;
     row-gap: 0.5rem;
+
+    .create-user-details {
+        font-weight: bold;
+        padding: 0.3rem;
+        border-radius: 8px;
+    }
+
+    .create-user-btn {
+        background: white;
+        border: none;
+        border-radius: 20px;
+        padding: 0.5rem;
+    }
 }

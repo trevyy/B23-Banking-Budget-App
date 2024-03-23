@@ -1,8 +1,10 @@
 import { useNavigate } from "react-router-dom";
 
+import { getUserData } from "../Data";
+
 const handleLogout = () => {
     const navigate = useNavigate();
-    const userData = JSON.parse(localStorage.getItem("userData"));
+    const userData = getUserData();
     const currentUser = JSON.parse(localStorage.getItem("currentUser"));
 
     if (currentUser) {

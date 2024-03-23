@@ -1,3 +1,10 @@
+$color-dark-gray: #242424;
+$color-gray: #2e2e2e;
+$color-purple: linear-gradient(to bottom right, rgb(111, 0, 255, 1), rgb(56, 0, 130, 1));;
+$color-gold: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%), radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+$color-red: #ff0051;
+$color-blue: #4359ff;
+
 .dashboard {
     display: flex;
     
@@ -29,22 +36,92 @@
 
             #balance {
                 width: 45%;
+                
+
+                .balance-title {
+                    margin: 0.2rem 0 0 0.3rem;
+                    padding: 0;
+                }
+
+                .balance-num {
+                    font-weight: 500;
+                    font-size: 1.3rem;
+                    margin: 0.8rem 0 0 0;
+                    text-align: center;
+                }
+
+                .balance-summary {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-around;
+                    font-size: 1.6rem;
+                    margin-top: 0;
+
+                    .balance-divider {
+                        margin-top: 1.3rem;
+                    }
+
+                    .balance-expenses, .balance-income {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        font-size: 0.8rem;
+                        margin: 1.3rem 0;
+
+                        .balance-expenses-name {
+                            color: $color-red;
+                            padding-right: 0.3rem;
+                        }
+
+                        .balance-income-name {
+                            color: $color-blue;
+                            padding-left: 0.3rem;
+                        }
+                    }
+                }
             }
 
-            #savings {
+            #exchange {
+                flex-grow: 1;
                 width: 45%;
+
+                .exchange-title {
+                    margin: 0.1rem 0.5rem 0.5rem 0.5rem;
+                }
             }
 
             #transaction {
-                height: 14rem;
+                height: 15rem;
+                padding: 0.3rem 1.5rem;
+
+                .transaction-table-header {
+                    text-align: center;
+                    color: white;
+                    background: $color-dark-gray;
+                    font-size: 0.8rem;
+                }
             }
 
             #transfer {
                 height: 6rem;
+
+                .transfer-title {
+                    margin: 0.3rem 0.5rem 0.5rem 0.5rem;
+                }
+
+                .transfer-table-header {
+                    color: white;
+                    background: $color-dark-gray;
+                    font-size: 0.6rem;
+                }
+
+                .transfer-table-content {
+                    font-size: 0.6rem;
+                }
             }
 
             #debit {
-                background: linear-gradient(to bottom right, rgb(111, 0, 255, 1), rgb(56, 0, 130, 1));
+                background: $color-purple;
                 height: 10rem;
                 padding: 1rem 1.5rem 1.5rem;
 
@@ -55,12 +132,12 @@
                 }
 
                 .debit-number {
-                    font-size: 12px;
+                    font-size: 0.7rem;
                     margin-bottom: 0;
                 }
 
                 .debit-balance {
-                    font-size: 34px;
+                    font-size: 1.8rem;
                     font-weight: bold;
                     margin: 0;
                 }
@@ -74,7 +151,7 @@
 
                 .card-chip {
                     border-radius: 6px;
-                    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%), radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+                    background: $color-gold;
                 }
             }
 
@@ -89,7 +166,7 @@
             }
             
             .grid-item { 
-                background-color: #2e2e2e;
+                background-color: $color-gray;
                 border-radius: 20px;
                 padding: 1rem;
                 margin: 0.5rem;
