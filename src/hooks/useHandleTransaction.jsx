@@ -15,6 +15,7 @@ const handleTransaction = (user, amount, setAmount, isDeposit) => {
     } else {
         if (parseFloat(amount) > parseFloat(user.balance)) {
             toast.error("Insufficient balance.");
+            return;
         }
         newBalance = parseInt(user.balance) - parseInt(amount);
         user.transactions.push({ type: "Withdraw", amount: amount, date: transactionDate });

@@ -9,14 +9,14 @@ import DisplayTransfer from "../../components/DisplayTransfer/DisplayTransfer.js
 import displayCurrencyExchange from "../../components/DisplayCurrency/DisplayCurrency.jsx";
 
 import findUser from "../../hooks/useUserFinder.jsx";
-import handleNumberFormat from "../../hooks/handleNumberFormat.jsx";
+import handleNumberFormat from "../../hooks/useHandleNumberFormat.jsx";
 import useBalanceSummary from "../../hooks/useBalanceSummary.jsx";
 
 const Dashboard = () => {
   const user = findUser("currentUser");
   const displayTransaction = (user.transactions).slice(0).reverse().slice(0, 5);
-  const displayTransfer = (user.transfers).slice(0).reverse().slice(0);
-  const userBalance = handleNumberFormat(user.balance); 
+  const displayTransfer = (user.transfers).slice(0).reverse().slice(0, 1);
+  const userBalance = handleNumberFormat(user.balance);
   const expenses = handleNumberFormat(useBalanceSummary(user).totalExpenses);
   const income = handleNumberFormat(useBalanceSummary(user).totalIncome);
 
@@ -49,11 +49,11 @@ const Dashboard = () => {
             </div>
             <div id="transaction" className="grid-item">
               <p className="transaction-title"><b> Transaction </b></p>
-              {DisplayTransactions(displayTransaction)}
+              <DisplayTransactions user={displayTransaction} />
             </div>
             <div id="transfer" className="grid-item">
               <p className="transfer-title"><b> Most Recent Transfer </b></p>
-              {DisplayTransfer(displayTransfer)}
+              <DisplayTransfer user={displayTransfer} />
               </div>
           </div>
           <div className="grid-column-right">

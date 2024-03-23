@@ -21,14 +21,14 @@ const AppRouter = () => {
         setIsLoggedIn(true);
     }
 
-    const PrivateRoute = ({ path, element }) => {
+    const PrivateRoute = ({ path, element }) => { // can declare outside -- use prop (isLoggedIn)
         return isLoggedIn ? element : <Navigate to="/login" />;
     }
 
     const router = createBrowserRouter([
         {
         path: "/",
-        element: <Outlet />,
+        element: <Outlet />,    // shouldnt use sidebar xtimes
         children: [
         {
             path: "/dashboard",

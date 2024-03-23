@@ -10,9 +10,9 @@ import Header from "../../components/Header/Header.jsx";
 import DisplayTransfer from "../../components/DisplayTransfer/DisplayTransfer.jsx";
 
 import findUser from "../../hooks/useUserFinder.jsx";
-import handleTransfer from "../../hooks/handleTransfer.jsx";
-import handleNextPage from "../../hooks/handleNextPage.jsx";
-import handleNumberFormat from "../../hooks/handleNumberFormat.jsx";
+import handleTransfer from "../../hooks/useHandleTransfer.jsx";
+import handleNextPage from "../../hooks/useHandleNextPage.jsx";
+import handleNumberFormat from "../../hooks/useHandleNumberFormat.jsx";
 
 const Transfer = () => {
   const userData = getUserData() || [];
@@ -60,7 +60,7 @@ const Transfer = () => {
           <button onClick={handleNext} className="next-btn"> Next </button>
         </div>
 
-        <div className="transaction-table-page"> {DisplayTransfer(displayedUsers)} </div>
+        <div className="transaction-table-page"> <DisplayTransfer user={displayedUsers} /> </div>
       </div>    
     </div>
   );

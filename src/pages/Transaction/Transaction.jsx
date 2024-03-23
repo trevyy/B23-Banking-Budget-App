@@ -5,9 +5,9 @@ import Header from "../../components/Header/Header.jsx";
 import DisplayTransactions from "../../components/DisplayTransactions/DisplayTransactions.jsx";
 
 import findUser from "../../hooks/useUserFinder.jsx";
-import handleTransaction from "../../hooks/handleTransaction.jsx";
-import handleNextPage from "../../hooks/handleNextPage.jsx";
-import handleNumberFormat from "../../hooks/handleNumberFormat.jsx";
+import handleTransaction from "../../hooks/useHandleTransaction.jsx";
+import handleNextPage from "../../hooks/useHandleNextPage.jsx";
+import handleNumberFormat from "../../hooks/useHandleNumberFormat.jsx";
 
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -54,7 +54,7 @@ const Transaction = () => {
           <button onClick={handleNext} className="next-btn"> Next </button>
         </div>
 
-        <div className="transaction-table-page"> {DisplayTransactions(displayedUsers)} </div>
+        <div className="transaction-table-page"> <DisplayTransactions user={displayedUsers} /> </div>
       </div>
     </div>
   );
