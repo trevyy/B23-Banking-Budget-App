@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import "./Sidebar.scss";
 
 import { HamIcon, HomeIcon, TransactIcon, TransferIcon, WalletIcon, UserIcon, LogoutIcon} from "../../assets/icons";
-
 import handleLogout from "../../hooks/useHandleLogout";
 
 const NavItems = [
@@ -65,7 +64,7 @@ const Sidebar = () => {
                   to={item.url}
                   onClick={() => handleItemClick(item)}
             >
-              <p className={currentPage === item.name ? 'selected' : ''}> {/*use NavLink in ReactRouter*/}
+              <p className={currentPage === item.name ? 'selected' : ''}>
                 {item.logo} {item.name}
               </p>
             </Link>

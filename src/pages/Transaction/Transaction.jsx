@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import "./Transaction.scss";
 
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 import Header from "../../components/Header/Header.jsx";
 import DisplayTransactions from "../../components/DisplayTransactions/DisplayTransactions.jsx";
 
@@ -9,14 +12,13 @@ import handleTransaction from "../../hooks/useHandleTransaction.jsx";
 import handleNextPage from "../../hooks/useHandleNextPage.jsx";
 import handleNumberFormat from "../../hooks/useHandleNumberFormat.jsx";
 
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+
 
 const Transaction = () => {
   const user = findUser("currentUser");
   const userBalance = handleNumberFormat(user.balance);
   const [amount, setAmount] = useState(0);
-  const { displayedUsers, handleNext, handlePrevious } = handleNextPage(user.transactions);
+  const { displayedUsers, handleNext, handlePrevious, currentPage, totalPages } = handleNextPage(user.transactions);
 
   const handleDeposit = () => {
     handleTransaction(user, amount, setAmount, true);
@@ -51,6 +53,9 @@ const Transaction = () => {
         </p>
         <div className="transaction-btns">
           <button onClick={handlePrevious} className="prev-btn"> Previous </button>
+          <span className="transaction-page">
+            Page {currentPage} of {totalPages}
+          </span>
           <button onClick={handleNext} className="next-btn"> Next </button>
         </div>
 

@@ -33,6 +33,7 @@ $color-purple: linear-gradient(to bottom, rgb(111, 0, 255, 1), rgb(56, 0, 130, 1
 
         .account-btns {
             display: flex;
+            align-items: center;
             justify-content: right;
             font-size: 1rem;
             margin-right: 1.6rem;
@@ -62,19 +63,6 @@ $color-purple: linear-gradient(to bottom, rgb(111, 0, 255, 1), rgb(56, 0, 130, 1
                 margin:  30px 0 0 0;
                 width: 7rem;
                 font-size: 0.8rem;
-            }
-
-            .account-creat {
-                display: flex;
-                align-items: right;
-            }
-
-            input {
-                width: 10rem;
-            }
-
-            input[type=number] {
-                width: 5rem;
             }
         }
     }

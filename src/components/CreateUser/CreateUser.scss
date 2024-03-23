@@ -1,13 +1,19 @@
 .create-user {
     display: flex;
     align-items: center;
-    flex-direction: row;
+    justify-content: space-evenly;
+    flex-direction: column;
     row-gap: 0.5rem;
 
-    .create-user-details {
-        font-weight: bold;
-        padding: 0.3rem;
-        border-radius: 8px;
+    .create-user-main {
+        display: inline-block;
+        text-align: right;
+
+        .create-user-details {
+            font-weight: bold;
+            padding: 0.3rem;
+            border-radius: 8px;
+        }
     }
 
     .create-user-btn {

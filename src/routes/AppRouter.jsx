@@ -28,7 +28,7 @@ const AppRouter = () => {
     const router = createBrowserRouter([
         {
         path: "/",
-        element: <Outlet />,    // shouldnt use sidebar xtimes
+        element: <Outlet />, // dont declare sidebar too many times
         children: [
         {
             path: "/dashboard",

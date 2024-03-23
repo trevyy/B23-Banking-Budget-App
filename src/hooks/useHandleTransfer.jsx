@@ -30,8 +30,10 @@ const handleTransfer = (user, recipient, TransferAmount, setTransferAmount, setR
             
             toast.success("Transfer successful!");
         } else {
-        toast.error("Recipient not found");
+            toast.error("Insufficient balance.");
         }
+    } else {
+        toast.error("Recipient not found.");
     }
 };
 

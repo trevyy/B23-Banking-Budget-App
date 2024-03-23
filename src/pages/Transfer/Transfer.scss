@@ -13,12 +13,17 @@ $color-purple: linear-gradient(to bottom, rgb(111, 0, 255, 1), rgb(56, 0, 130, 1
         }
 
         .transfer-number, .transfer-amount {
-            text-align: left;
+            text-align-last: left;
             margin: 0 1rem 0 1rem;
             padding: 0.5rem;
             border-radius: 8px;
             font-size: 1rem;
+
+            .transfer-recipient {
+                text-align: left;
+            }
         }
+        
 
         .transfer-btn {
             background: $color-purple;
@@ -48,6 +53,7 @@ $color-purple: linear-gradient(to bottom, rgb(111, 0, 255, 1), rgb(56, 0, 130, 1
 
         .transfer-btns {
             display: flex;
+            align-items: center;
             justify-content: right;
             font-size: 1rem;
             margin-right: 1.6rem;
