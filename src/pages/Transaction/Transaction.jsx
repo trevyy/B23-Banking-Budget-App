@@ -12,8 +12,6 @@ import handleTransaction from "../../hooks/useHandleTransaction.jsx";
 import handleNextPage from "../../hooks/useHandleNextPage.jsx";
 import handleNumberFormat from "../../hooks/useHandleNumberFormat.jsx";
 
-
-
 const Transaction = () => {
   const user = findUser("currentUser");
   const userBalance = handleNumberFormat(user.balance);

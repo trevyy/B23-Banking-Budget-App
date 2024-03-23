@@ -5,9 +5,9 @@ const useBalanceSummary = (user) => {
     if(user.transactions) {
       user.transactions.forEach((transaction) => {
         if (transaction.type === "Deposit") {
-          totalExpenses += parseInt(transaction.amount);
-        } else if (transaction.type === "Withdraw") {
           totalIncome += parseInt(transaction.amount);
+        } else if (transaction.type === "Withdraw") {
+          totalExpenses += parseInt(transaction.amount);
         }
       });
     }
