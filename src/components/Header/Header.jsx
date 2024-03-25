@@ -2,7 +2,6 @@ import React from "react";
 import "./Header.scss";
 
 import { SiteLogo } from "../../assets/icons.jsx";
-
 import useCurrentDateTime from "../../hooks/useCurrentDateTime.jsx";
 import findUser from "../../hooks/useUserFinder.jsx";
 

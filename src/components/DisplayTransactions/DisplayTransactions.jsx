@@ -1,7 +1,7 @@
 import React from "react";
 import "./DisplayTransactions.scss";
 
-const DisplayTransactions = (user) => {
+const DisplayTransactions = ({user}) => {
   const reversedTransactions = [...user];
 
   return(

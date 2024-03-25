@@ -87,27 +87,4 @@ $color-purple: rgba(75, 0, 175, 0.8);
             background-color: #242424;;
         }
     }
-
-    .account-create-main {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        position: absolute;
-        top: 80%;
-        left: 72%;
-        transform: translate(-50%, -50%);
-        z-index: 1;
-    
-        .account-create-toggle {
-            background: white;
-            color: $color-purple;
-            border: none;
-            border-radius: 20px;
-            padding: 0.5rem;
-            margin:  30px 0 0 0;
-            width: 7rem;
-            font-size: 0.8rem;
-        }
-    }
 }

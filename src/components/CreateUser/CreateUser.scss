@@ -1,19 +1,25 @@
 .create-user {
     display: flex;
     align-items: center;
+    justify-content: space-evenly;
     flex-direction: column;
     row-gap: 0.5rem;
 
-    .create-user-details {
-        font-weight: bold;
-        padding: 0.3rem;
-        border-radius: 8px;
+    .create-user-main {
+        display: inline-block;
+        text-align: right;
+
+        .create-user-details {
+            font-weight: bold;
+            padding: 0.3rem;
+            border-radius: 8px;
+        }
     }
 
     .create-user-btn {
-        background: white;
+        background: linear-gradient(to bottom, rgb(111, 0, 255, 1), rgb(56, 0, 130, 1));
         border: none;
-        border-radius: 20px;
+        border-radius: 10px;
         padding: 0.5rem;
     }
 }

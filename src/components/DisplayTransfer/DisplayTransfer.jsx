@@ -1,7 +1,7 @@
 import React from "react";
 import "./DisplayTransfer.scss";
 
-const DisplayTransfer = (user) => {
+const DisplayTransfer = ({ user }) => {
   const reversedTransfer = [...user];
 
   return(

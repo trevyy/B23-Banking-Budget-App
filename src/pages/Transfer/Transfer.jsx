@@ -5,14 +5,13 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import { getUserData } from "../../Data.jsx";
-
 import Header from "../../components/Header/Header.jsx";
 import DisplayTransfer from "../../components/DisplayTransfer/DisplayTransfer.jsx";
 
 import findUser from "../../hooks/useUserFinder.jsx";
-import handleTransfer from "../../hooks/handleTransfer.jsx";
-import handleNextPage from "../../hooks/handleNextPage.jsx";
-import handleNumberFormat from "../../hooks/handleNumberFormat.jsx";
+import handleTransfer from "../../hooks/useHandleTransfer.jsx";
+import handleNextPage from "../../hooks/useHandleNextPage.jsx";
+import handleNumberFormat from "../../hooks/useHandleNumberFormat.jsx";
 
 const Transfer = () => {
   const userData = getUserData() || [];
@@ -21,7 +20,7 @@ const Transfer = () => {
 
   const currentUser = findUser("currentUser");
   const recipient = userData.find(user => user.accountNumber === recipientAccountNumber);
-  const { displayedUsers, handleNext, handlePrevious } = handleNextPage(currentUser.transfers);
+  const { displayedUsers, handleNext, handlePrevious, currentPage, totalPages } = handleNextPage(currentUser.transfers);
   const userBalance = handleNumberFormat(currentUser.balance);
 
   const handleTransferMoney = () => {
@@ -43,13 +42,21 @@ const Transfer = () => {
           onChange={(e) => setTransferAmount(e.target.value)} 
           placeholder="Enter amount to transfer"
         />
-        <input 
-          type="text"
+        <select
           className="transfer-number"
-          value={recipientAccountNumber} 
+          value={recipientAccountNumber}
           onChange={(e) => setRecipientAccountNumber(e.target.value)}
-          placeholder="Enter recipient's account number" 
-        />
+        >
+          <option>Select recipient's account number</option>
+          {userData.map(user => (
+            (user.accountNumber !== currentUser.accountNumber) && (user.isAdmin === false) && (
+              <option key={user.accountNumber} value={user.accountNumber} className="transfer-recipient">
+                {user.accountNumber} || {user.fullname}
+              </option>
+            )
+          ))}
+        </select>
+
         <button onClick={handleTransferMoney} className="transfer-btn"> Transfer </button>
 
         <p className="transfer-history">
@@ -57,10 +64,13 @@ const Transfer = () => {
         </p>
         <div className="transfer-btns">
           <button onClick={handlePrevious} className="prev-btn"> Previous </button>
+          <span className="pagination-info">
+            Page {currentPage} of {totalPages}
+          </span>
           <button onClick={handleNext} className="next-btn"> Next </button>
         </div>
 
-        <div className="transaction-table-page"> {DisplayTransfer(displayedUsers)} </div>
+        <div className="transaction-table-page"> <DisplayTransfer user={displayedUsers} /> </div>
       </div>    
     </div>
   );

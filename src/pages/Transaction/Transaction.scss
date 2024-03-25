@@ -51,6 +51,7 @@ $color-purple: linear-gradient(to bottom, rgb(111, 0, 255, 1), rgb(56, 0, 130, 1
 
         .transaction-btns {
             display: flex;
+            align-items: center;
             justify-content: right;
             font-size: 1rem;
             margin-right: 1.6rem;
